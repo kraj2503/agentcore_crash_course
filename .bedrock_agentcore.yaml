@@ -1,4 +1,4 @@
-default_agent: agentcoreCrashCourse
+default_agent: agentcore_memory
 agents:
   agentcoreCrashCourse:
     name: agentcoreCrashCourse
@@ -42,6 +42,66 @@ agents:
       memory_id: null
       memory_arn: null
       memory_name: null
+      event_expiry_days: 30
+      first_invoke_memory_check_done: false
+      was_created_by_toolkit: false
+    identity:
+      credential_providers: []
+      workload: null
+    aws_jwt:
+      enabled: false
+      audiences: []
+      signing_algorithm: ES384
+      issuer_url: null
+      duration_seconds: 300
+    authorizer_configuration: null
+    request_header_configuration: null
+    oauth_configuration: null
+    api_key_env_var_name: null
+    api_key_credential_provider_name: null
+    is_generated_by_agentcore_create: false
+  agentcore_memory:
+    name: agentcore_memory
+    language: python
+    node_version: '20'
+    entrypoint: /Users/kshitizraj/Desktop/Development/AgentCore/02_agentcore_memory.py
+    deployment_type: container
+    runtime_type: null
+    platform: linux/arm64
+    container_runtime: none
+    source_path: /Users/kshitizraj/Desktop/Development/AgentCore
+    aws:
+      execution_role: arn:aws:iam::533267211898:role/AmazonBedrockAgentCoreSDKRuntime-us-east-1-c5d93b0882
+      execution_role_auto_create: false
+      account: '533267211898'
+      region: us-east-1
+      ecr_repository: 533267211898.dkr.ecr.us-east-1.amazonaws.com/bedrock-agentcore-agentcore_memory
+      ecr_auto_create: false
+      s3_path: null
+      s3_auto_create: false
+      network_configuration:
+        network_mode: PUBLIC
+        network_mode_config: null
+      protocol_configuration:
+        server_protocol: HTTP
+      observability:
+        enabled: true
+      lifecycle_configuration:
+        idle_runtime_session_timeout: null
+        max_lifetime: null
+    bedrock_agentcore:
+      agent_id: agentcore_memory-M2xm1iHcFw
+      agent_arn: arn:aws:bedrock-agentcore:us-east-1:533267211898:runtime/agentcore_memory-M2xm1iHcFw
+      agent_session_id: d5d024d6-da01-43f7-aa13-c2b2e81c02b1
+    codebuild:
+      project_name: bedrock-agentcore-agentcore_memory-builder
+      execution_role: arn:aws:iam::533267211898:role/AmazonBedrockAgentCoreSDKCodeBuild-us-east-1-c5d93b0882
+      source_bucket: bedrock-agentcore-codebuild-sources-533267211898-us-east-1
+    memory:
+      mode: STM_AND_LTM
+      memory_id: memory_y15lt-fPAoQsF7NZ
+      memory_arn: null
+      memory_name: agentcore_memory_memory
       event_expiry_days: 30
       first_invoke_memory_check_done: false
       was_created_by_toolkit: false

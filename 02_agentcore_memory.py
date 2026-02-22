@@ -28,7 +28,7 @@ _ = load_dotenv()
 app = BedrockAgentCoreApp()
 # AgentCore Memory Configuration
 REGION = "us-east-1"
-MEMORY_ID = "lauki_agent_memory-Yrm3JrG0Vz"
+MEMORY_ID = "memory_y15lt-fPAoQsF7NZ"
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 # Initialize memory components
