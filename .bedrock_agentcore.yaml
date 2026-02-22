@@ -32,7 +32,7 @@ agents:
     bedrock_agentcore:
       agent_id: agentcoreCrashCourse-P8ChvOFVfW
       agent_arn: arn:aws:bedrock-agentcore:us-east-1:533267211898:runtime/agentcoreCrashCourse-P8ChvOFVfW
-      agent_session_id: 2defe2a0-97af-498b-8f54-b40291cdae7a
+      agent_session_id: 5751fb73-3c8c-475b-9fff-0ccc3b2849aa
     codebuild:
       project_name: bedrock-agentcore-agentcorecrashcourse-builder
       execution_role: arn:aws:iam::533267211898:role/AmazonBedrockAgentCoreSDKCodeBuild-us-east-1-21cbe0027e
